@@ -24,8 +24,8 @@ class Init extends Migration
         Schema::create('notes', function (Blueprint $table){
             $table->id();
             $table->string('note');
-            //'notable_id'
-            //'notable_type'
+            $table->bigInteger('notable_id');
+            $table->string('notable_type', 127);
             $table->timestamps();
         });
 
